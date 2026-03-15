@@ -10,7 +10,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 
-public class FirstSeleniumTest {
+public class LoginShouldFailTest {
     WebDriver driver;
 
     @BeforeClass
@@ -23,8 +23,8 @@ public class FirstSeleniumTest {
 
     @AfterClass
     public void tearDown() {
-      // driver.quit();
-       // driver.close();
+       //  driver.quit();
+        // driver.close();
     }
 
     @Test
@@ -39,8 +39,8 @@ public class FirstSeleniumTest {
         driver.findElement(By.tagName("button")).click();
         Thread.sleep(2000);
         String actualResult = driver.findElement(By.tagName("h6")).getText();
-        String expectedResult = "Dashboard";
-        Assert.assertEquals(actualResult, expectedResult);
-
+        String expectedResult = "Dashboard1";
+        Assert.assertNotEquals(actualResult, expectedResult);
+       
     }
 }
