@@ -14,8 +14,10 @@ public class HomePage extends BasePage {
     private By formsCard= By.xpath("//div[@id='root']//h5[text()='Forms']");
 
     public FormsPage goToForms(){
+        delay(2000);
         scrollToElementJS(formsCard);
         click(formsCard);
         return new FormsPage();
+
     }
 }

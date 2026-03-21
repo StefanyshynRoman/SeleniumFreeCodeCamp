@@ -15,4 +15,10 @@ public class JavaScriptUtility extends Utility {
         String jsScript="arguments[0].scrollIntoView(true);";
         ((JavascriptExecutor)driver).executeScript(jsScript, element);
     }
+
+    public static void clickJS(By locator) {
+        WebElement element = driver.findElement(locator);
+        JavascriptExecutor executor = (JavascriptExecutor) driver;
+        executor.executeScript("arguments[0].click();", element);
+    }
 }
