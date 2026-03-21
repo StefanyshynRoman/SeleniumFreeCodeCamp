@@ -1,9 +1,8 @@
-package com.saucedemo.pages;
+package com.base;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
  * @author romanpz051@gmail.com on 15.03.2026.
@@ -26,5 +25,12 @@ public class BasePage {
     }
     protected void click(By locator) {
         find(locator).click();
+    }
+    public static void delay(int milliseconds) {
+        try {
+            Thread.sleep(milliseconds);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }
