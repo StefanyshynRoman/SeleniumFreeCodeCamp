@@ -2,7 +2,6 @@ package com.demoqa.pages.forms;
 
 import com.demoqa.pages.HomePage;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 
 import static utilities.JavaScriptUtility.scrollToElementJS;
 
@@ -11,8 +10,9 @@ import static utilities.JavaScriptUtility.scrollToElementJS;
  * @project SeleniumFreeCodeCamp
  */
 public class FormsPage extends HomePage {
-    private By practiceFormMenuItem= By.xpath("//li[@id='item-0']//span[text()='Practice Form']");
-    public  PracticeFormPage clickPracticeForm(){
+    private By practiceFormMenuItem = By.xpath("//li[@id='item-0']//span[text()='Practice Form']");
+
+    public PracticeFormPage clickPracticeForm() {
         delay(2000);
         scrollToElementJS(practiceFormMenuItem);
         click(practiceFormMenuItem);

@@ -4,10 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-/**
- * @author romanpz051@gmail.com on 15.03.2026.
- * @project SeleniumFreeCodeCamp
- */
 public class BasePage {
     public static WebDriver driver;
 

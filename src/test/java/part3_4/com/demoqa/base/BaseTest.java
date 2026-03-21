@@ -11,30 +11,30 @@ import org.testng.annotations.BeforeMethod;
 import static com.base.BasePage.delay;
 import static utilities.Utility.setUtilityDriver;
 
-/**
- * @author romanpz051@gmail.com on 21.03.2026.
- * @project SeleniumFreeCodeCamp
- */
+
 public class BaseTest {
     protected WebDriver driver;
     protected BasePage basePage;
     protected HomePage homePage;
     private String DEMOQA_URL = "https://demoqa.com";
+
     @BeforeClass
-    public void setUp(){
-        driver=new ChromeDriver();
+    public void setUp() {
+        driver = new ChromeDriver();
         driver.manage().window().maximize();
     }
+
     @BeforeMethod
-    public void loadApplication(){
+    public void loadApplication() {
         driver.get(DEMOQA_URL);
-        basePage=new BasePage();
+        basePage = new BasePage();
         basePage.setDriver(driver);
         setUtilityDriver();
-        homePage=new HomePage();
+        homePage = new HomePage();
     }
+
     @AfterClass
-    public void tearDown(){
+    public void tearDown() {
         delay(5000);
         driver.quit();
     }
