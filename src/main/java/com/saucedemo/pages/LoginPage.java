@@ -3,10 +3,6 @@ package com.saucedemo.pages;
 import com.base.BasePage;
 import org.openqa.selenium.By;
 
-/**
- * @author romanpz051@gmail.com on 15.03.2026.
- * @project SeleniumFreeCodeCamp
- */
 public class LoginPage  extends BasePage {
     private By usernameField =By.id("user-name");
     private By passwordField =By.id("password");

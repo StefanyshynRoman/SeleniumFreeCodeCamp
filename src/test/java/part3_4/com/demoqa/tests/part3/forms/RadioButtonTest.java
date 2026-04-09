@@ -4,8 +4,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import part3_4.com.demoqa.base.BaseTest;
 
-import static com.base.BasePage.delay;
-
 
 public class RadioButtonTest extends BaseTest {
     @Test

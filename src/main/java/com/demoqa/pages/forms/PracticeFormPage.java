@@ -5,10 +5,6 @@ import org.openqa.selenium.By;
 import static utilities.JavaScriptUtility.clickJS;
 import static utilities.JavaScriptUtility.scrollToElementJS;
 
-/**
- * @author romanpz051@gmail.com on 21.03.2026.
- * @project SeleniumFreeCodeCamp
- */
 public class PracticeFormPage extends FormsPage {
     private By femaleRadioButton = By.id("gender-radio-2");
 
