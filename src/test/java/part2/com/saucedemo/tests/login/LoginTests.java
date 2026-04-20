@@ -4,10 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import part2.com.saucedemo.base.BaseTest;
 
-/**
- * @author romanpz051@gmail.com on 15.03.2026.
- * @project SeleniumFreeCodeCamp
- */
+
 public class LoginTests extends BaseTest {
     @Test
     public void testLoginErrorMessage() {

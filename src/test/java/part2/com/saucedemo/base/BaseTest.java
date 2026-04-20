@@ -9,10 +9,7 @@ import org.slf4j.LoggerFactory;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
-/**
- * @author romanpz051@gmail.com on 15.03.2026.
- * @project SeleniumFreeCodeCamp
- */
+
 public class BaseTest {
     private static final Logger log = LoggerFactory.getLogger(BaseTest.class);
     protected WebDriver driver;
