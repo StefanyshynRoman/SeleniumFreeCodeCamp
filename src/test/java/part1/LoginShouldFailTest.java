@@ -23,8 +23,8 @@ public class LoginShouldFailTest {
 
     @AfterClass
     public void tearDown() {
-       //  driver.quit();
-        // driver.close();
+         driver.quit();
+         driver.close();
     }
 
     @Test
