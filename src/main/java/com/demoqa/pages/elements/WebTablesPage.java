@@ -1,7 +1,6 @@
 package com.demoqa.pages.elements;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 
 
 public class WebTablesPage extends ElementsPage {
@@ -14,11 +13,17 @@ public class WebTablesPage extends ElementsPage {
     }
 
     public void setAge(String age) {
-                      //WebElement editAge=driver.findElement(registrationAgeField);
-                      //editAge.clear();
+        //WebElement editAge=driver.findElement(registrationAgeField);
+        //editAge.clear();
         set(registrationAgeField, age);
     }
+
     public void clickSubmitButton() {
         click(submitButton);
+    }
+
+    public String getTableAge(String email) {
+        By tableAge = By.xpath("//td[text()='" + email + "']//preceding::td[1]");
+        return find(tableAge).getText();
     }
 }
