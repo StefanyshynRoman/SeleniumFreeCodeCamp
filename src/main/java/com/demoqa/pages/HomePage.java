@@ -10,6 +10,8 @@ import static utilities.JavaScriptUtility.scrollToElementJS;
 public class HomePage extends BasePage {
     private By formsCard = By.xpath("//div[@id='root']//h5[text()='Forms']");
     private By elementsCard = By.xpath("//div[@id='root']//h5[text()='Elements']");
+    private By widgesCard=By.xpath("//div[@id='root']//h5[text()='Widgets']");
+
     public FormsPage goToForms() {
         scrollToElementJS(formsCard);
         click(formsCard);
@@ -19,6 +21,11 @@ public class HomePage extends BasePage {
         scrollToElementJS(elementsCard);
         click(elementsCard);
         return new ElementsPage();
+    }
+    public WidgetsPage goToWidgets(){
+        scrollToElementJS(widgesCard);
+        click(widgesCard);
+        return WidgetsPage();
     }
 
 }
