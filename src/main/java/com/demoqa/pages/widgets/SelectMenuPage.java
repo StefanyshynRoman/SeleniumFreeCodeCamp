@@ -3,6 +3,8 @@ package com.demoqa.pages.widgets;
 
 import org.openqa.selenium.By;
 
+import java.util.List;
+
 import static utilities.DropDownUtility.*;
 import static utilities.JavaScriptUtility.scrollToElementJS;
 
@@ -23,5 +25,9 @@ public class SelectMenuPage extends WidgetsPage {
     public void deselectStandardMulti(String value) {
         scrollToElementJS(standardMultiSelect);
         deselectByValue(standardMultiSelect, value);
+    }
+
+    public List<String> getAllSelectedStandardMultiOptions(){
+        return getAllSelectedOptions(standardMultiSelect);
     }
 }
