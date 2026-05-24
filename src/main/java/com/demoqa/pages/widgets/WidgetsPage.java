@@ -19,7 +19,7 @@ public class WidgetsPage extends HomePage {
 
     public DatePickerMenuPage clickDatePicker(){
         scrollToElementJS(datePickerMenuItem);
-        click(selectMenuItem);
+        click(datePickerMenuItem);
         return new DatePickerMenuPage();
     }
 }

@@ -2,6 +2,8 @@ package com.demoqa.pages.widgets;
 
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 
 import static utilities.DropDownUtility.selectByVisibleText;
 
@@ -20,8 +22,18 @@ public class DatePickerMenuPage extends WidgetsPage {
         click(dayValue(day));
     }
 
+    public boolean isDayInMonth(String day) {
+        return find(dayValue(day)).isDisplayed();
+    }
+
     public void clickSelectDate() {
+        WebElement element = find(selectDateField);
+
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block: 'center'});", element);
+
+        try { Thread.sleep(500); } catch (InterruptedException e) { e.printStackTrace(); }
         click(selectDateField);
+
     }
 
     public String getDate() {
