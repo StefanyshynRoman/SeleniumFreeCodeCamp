@@ -17,17 +17,19 @@ public class SelectMenuPage extends WidgetsPage {
 //        select.selectByContainsVisibleText(text);
         selectByVisibleText(standardMultiSelect, text);
     }
+
     public void selectStandardMulti(int index) {
         scrollToElementJS(standardMultiSelect);
 
         selectByIndex(standardMultiSelect, index);
     }
+
     public void deselectStandardMulti(String value) {
         scrollToElementJS(standardMultiSelect);
         deselectByValue(standardMultiSelect, value);
     }
 
-    public List<String> getAllSelectedStandardMultiOptions(){
+    public List<String> getAllSelectedStandardMultiOptions() {
         return getAllSelectedOptions(standardMultiSelect);
     }
 }

@@ -1,15 +1,12 @@
 package part3_4.com.demoqa.tests.part3.widgets;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import part3_4.com.demoqa.base.BaseTest;
 
-import static com.base.BasePage.delay;
-
 public class DataTest extends BaseTest {
     String month = "December";
-    String monthNumber="12";
+    String monthNumber = "12";
     String day = "31";
     String year = "2034";
 
@@ -28,8 +25,8 @@ public class DataTest extends BaseTest {
         String expectedDate = monthNumber + "/" + day + "/" + year;
         Assert.assertEquals(actualDate, expectedDate,
                 "\n Actual & Expected Dates Do Not Match" +
-                "\n Actual Date:   "+ actualDate +
-                "\n Expected Date: "+ expectedDate + "!");
+                        "\n Actual Date:   " + actualDate +
+                        "\n Expected Date: " + expectedDate + "!");
 
 
     }
