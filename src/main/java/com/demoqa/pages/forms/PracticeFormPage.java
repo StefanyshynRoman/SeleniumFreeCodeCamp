@@ -48,7 +48,7 @@ public class PracticeFormPage extends FormsPage {
         return find(readingHobbyCheckbox).isSelected();
     }
     public void clickSubmitButton() {
-      //  scrollToElementJS(submitButton);
+        scrollToElementJS(submitButton);
         click(submitButton);
     }
 }
