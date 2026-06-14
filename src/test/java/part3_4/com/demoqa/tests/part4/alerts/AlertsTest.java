@@ -7,10 +7,10 @@ import part3_4.com.demoqa.base.BaseTest;
 import static com.base.BasePage.delay;
 import static utilities.SwitchToUtility.*;
 
+@Test
 
 public class AlertsTest extends BaseTest {
 
-    @Test
     public void testInformationAlert() {
         String expectedAlertText = "You clicked a button";
         var alertsPage = homePage.goToAlertsFramesWindowsCard().clickAlerts();
@@ -19,5 +19,18 @@ public class AlertsTest extends BaseTest {
         Assert.assertEquals(getAlertText(), expectedAlertText,
                 "\n Actual $ Expected Messages Do Not Match \n ");
         acceptAlert();
+    }
+
+    public void testConfirmationAlert() {
+
+        var alertsPage = homePage.goToAlertsFramesWindowsCard().clickAlerts();
+        alertsPage.clickConfirmationAlertButton();
+        delay(2000);
+        dismissAlert();
+        String actualConfirmationResult = alertsPage.getConfirmationResult();
+        String expectedConfirmationResult = "You selected Cancel";
+        Assert.assertEquals(actualConfirmationResult, expectedConfirmationResult,
+                "\n You Did not Select Cancel \n ");
+
     }
 }
