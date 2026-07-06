@@ -3,25 +3,30 @@ package com.demoqa.pages.alerts_frame_windows;
 
 import org.openqa.selenium.By;
 
-public class FramesPage extends  Alerts_Frame_WindowsPage{
-   private By textInFrame = By.id("sampleHeading");
-   private String iFrameBigBox="frame1";
-   private By headerFramesText=By.xpath("//div[@id='root']//h1[text()='Frames']");
+import static utilities.SwitchToUtility.*;
 
-   public String getHeaderFramesText(){
-       return find(headerFramesText).getText();
-   }
+public class FramesPage extends Alerts_Frame_WindowsPage {
+    private By textInFrame = By.id("sampleHeading");
+    private String iFrameBigBox = "frame1";
+    private By headerFramesText = By.xpath("//div[@id='root']//h1[text()='Frames']");
 
-   private void switchToBigBox(){
-       driver.switchTo().frame(iFrameBigBox);
-   }
+    public String getHeaderFramesText() {
 
-   public String getTextInBigFrame(){
-       switchToBigBox();
-       String bigFrameText=find(textInFrame).getText();
-       System.out.println("Big Frame Text: "+bigFrameText);
-       driver.switchTo().parentFrame();
-       return bigFrameText;
+        return find(headerFramesText).getText();
+    }
 
-   }
+    private void switchToBigBox() {
+        // driver.switchTo().frame(iFrameBigBox);
+        switchToFrameString(iFrameBigBox);
+    }
+
+    public String getTextInBigFrame() {
+        switchToBigBox();
+        String bigFrameText = find(textInFrame).getText();
+        System.out.println("Big Frame Text: " + bigFrameText);
+        //  driver.switchTo().parentFrame();
+        switchToDefaultContent();
+        return bigFrameText;
+
+    }
 }
