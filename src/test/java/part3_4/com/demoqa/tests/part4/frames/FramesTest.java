@@ -13,6 +13,10 @@ public class FramesTest extends BaseTest {
         String expectedBixBoxText = "This is a sample page";
         Assert.assertEquals(actualBixBoxText, expectedBixBoxText,
                 "\n Actual $ Expected Text Do Not Match \n");
+        String actualHeaderText= framesPage.getHeaderFramesText();
+        String expectedHeaderText = "Frames";
+        Assert.assertEquals(actualHeaderText, expectedHeaderText,
+                "\n Actual $ Expected Header Do Not Match \n");
 
     }
 
