@@ -13,7 +13,7 @@ public class HomePage extends BasePage {
     private By formsCard = By.xpath("//div[@id='root']//h5[text()='Forms']");
     private By elementsCard = By.xpath("//div[@id='root']//h5[text()='Elements']");
     private By widgesCard = By.xpath("//div[@id='root']//h5[text()='Widgets']");
-    private By alertsFrameWindowsCard=By.xpath("//div[@id='root']//h5[contains(text(), 'Alerts')]");
+    private By alertsFrameWindowsCard = By.xpath("//div[@id='root']//h5[contains(text(), 'Alerts')]");
 
     public FormsPage goToForms() {
         scrollToElementJS(formsCard);

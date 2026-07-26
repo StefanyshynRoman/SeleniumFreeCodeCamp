@@ -11,11 +11,11 @@ public class DynamicWaitTest extends BaseTest {
     @Test
     public void testVisibleAfterButtonText() {
         delay(2000);
-        var dynamicPage=homePage.goToElements().clickDynamicProperties();
+        var dynamicPage = homePage.goToElements().clickDynamicProperties();
 
-     String actualText= dynamicPage.getVisibleAfterButtonText();
-     String expectedText= "Visible After 5 Seconds";
-     Assert.assertEquals(actualText, expectedText,
-     "\n Actual & Expected Text Do ot Match \n");
+        String actualText = dynamicPage.getVisibleAfterButtonText();
+        String expectedText = "Visible After 5 Seconds";
+        Assert.assertEquals(actualText, expectedText,
+                "\n Actual & Expected Text Do ot Match \n");
     }
 }
