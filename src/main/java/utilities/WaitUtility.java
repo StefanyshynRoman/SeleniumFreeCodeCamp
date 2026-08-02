@@ -21,7 +21,7 @@ public class WaitUtility extends Utility {
     public static void fluentWaitUntilVisible(int second, By locator) {
         FluentWait fluentWait = new FluentWait(driver)
                 .withTimeout(Duration.ofSeconds(second))
-                .pollingEvery(Duration.ofSeconds(500))
+                .pollingEvery(Duration.ofMillis(900))
                 .ignoring(NoSuchElementException.class,
                         StaleElementReferenceException.class);
         fluentWait.until(ExpectedConditions.visibilityOfElementLocated(locator));
